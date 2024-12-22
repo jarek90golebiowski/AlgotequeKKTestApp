@@ -9,14 +9,11 @@ namespace KKApi.Controllers
     public class QuotesController : ControllerBase
     {
         private readonly IQuouteService _quouteService;
-        private readonly ILogger<QuotesController> _logger;
 
         public QuotesController(
-            IQuouteService quouteService,
-            ILogger<QuotesController> logger)
+            IQuouteService quouteService)
         {
             _quouteService = quouteService;
-            _logger = logger;
         }
 
         [HttpPost]
